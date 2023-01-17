@@ -13,7 +13,6 @@ int main(void) {
 	int num2 = 10;
 
 	printf("%d\n", SquareByValue(num1));
-
 	SquareByReference(&num2);
 	printf("%d\n", num2);
 	
