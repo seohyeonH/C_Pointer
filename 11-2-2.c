@@ -13,6 +13,6 @@ int main(void) {
 		arr[i] = temp;
 	}
 
-	printf("¿ª¼ø ¹®ÀÚ¿­ Ãâ·Â: %s", arr);
+	printf("ì—­ìˆœ ë¬¸ìì—´ ì¶œë ¥: %s", arr);
 	return 0;
 }
