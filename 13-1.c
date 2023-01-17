@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(void) {
-	// ¹®Á¦ 1
+	// ë¬¸ì œ 1
 	printf("Question 13-1.1\n");
 	
 	int arr[5] = { 1,2,3,4,5 };
@@ -17,7 +17,7 @@ int main(void) {
 	
 
 	
-	// ¹®Á¦ 2
+	// ë¬¸ì œ 2
 	printf("Question 13-1.2\n");
 	
 	int arr[5] = { 1,2,3,4,5 };
@@ -28,7 +28,7 @@ int main(void) {
 
 
 
-	// ¹®Á¦ 3
+	// ë¬¸ì œ 3
 	printf("Question 13-1.3\n");
 	
 	int arr[5] = { 1,2,3,4,5 };
@@ -43,7 +43,7 @@ int main(void) {
 
 
 
-	// ¹®Á¦ 4
+	// ë¬¸ì œ 4
 	printf("Question 13-1.4\n");
 
 	int arr[6] = { 1, 2, 3, 4, 5, 6 };
