@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 int main(void) {
-	// ë¬¸ì œ 1
+	// ¹®Á¦ 1
+	printf("Question 11-1.1\n");
 	int min, max;
 	int sum = 0;
 	int arr[5];
@@ -16,11 +17,12 @@ int main(void) {
 
 		sum += arr[i];
 	}
-	printf("ìµœëŒ“ê°’: %d, ìµœì†Ÿê°’: %d, ì´ í•©: %d", max, min, sum);
+	printf("ÃÖ´ñ°ª: %d, ÃÖ¼Ú°ª: %d, ÃÑ ÇÕ: %d", max, min, sum);
 	
-	// ë¬¸ì œ 2
+
+	// ¹®Á¦ 2
+	printf("Question 11-1.2\n");
 	char arr[] = "Good time";
-	for (int i = 0; arr[i] != '\0'; i++) printf("%c", arr[i]);
 	
-	return 0;
+	for (int i = 0; arr[i] != '\0'; i++) printf("%c", arr[i]);
 }
