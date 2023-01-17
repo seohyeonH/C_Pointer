@@ -4,6 +4,8 @@
 void ShowData(const int* ptr);
 
 int main(void) {
+	// 문제 1
+	printf("Question 14-2.1\n");
 	int num = 10;
 	int* ptr = &num;
 	ShowData(ptr);
