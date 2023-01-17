@@ -16,6 +16,6 @@ int main(void) {
 		sum += arr[i];
 	}
 
-	printf("ÃÖ´ñ°ª: %d, ÃÖ¼Ú°ª: %d, ÃÑ ÇÕ: %d", max, min, sum);
+	printf("ìµœëŒ“ê°’: %d, ìµœì†Ÿê°’: %d, ì´ í•©: %d", max, min, sum);
 	return 0;
 }
