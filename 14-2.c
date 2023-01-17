@@ -8,8 +8,8 @@ int main(void) {
 	printf("Question 14-2.1\n");
 	int num = 10;
 	int* ptr = &num;
+	
 	ShowData(ptr);
-	return 0;
 }
 
 void ShowData(const int* ptr) {
