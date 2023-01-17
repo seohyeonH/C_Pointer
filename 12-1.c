@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main(void) {
-	// ¹®Á¦ 1
+	// ë¬¸ì œ 1
 
 
-	// ¹®Á¦ 2
+	// ë¬¸ì œ 2
 	printf("Question 12-1.2\n");
 	
 	int num1 = 10, num2 = 20;
