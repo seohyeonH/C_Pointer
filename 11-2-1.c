@@ -8,6 +8,6 @@ int main(void) {
 
 	for (int i = 0; arr[i] != '\0'; i++) len++;
 
-	printf("¿µ´Ü¾îÀÇ ±æÀÌ : %d", len);
+	printf("ì˜ë‹¨ì–´ì˜ ê¸¸ì´: %d", len);
 	return 0;
 }
