@@ -9,15 +9,15 @@ int main(void) {
 	int* ptr = arr; //*ptr = &arr[0];
 
 	for (int i = 0; i < 5; i++) {
-		*ptr += 2;
-		ptr++;
+		*ptr += 2;    // ptr이 가리키고 있는 주소의 값에 2 더하기
+		ptr++;        // ptr의 주소 변경 ( *ptr = &arr[0] -> &arr[1] -> &arr[2] ... 
 	}
 
 	for (int i = 0; i < 5; i++) printf("%d ", arr[i]);
 	
 
 	
-	// 문제 2
+	
 	printf("Question 13-1.2\n");
 	
 	int arr[5] = { 1,2,3,4,5 };
@@ -36,8 +36,8 @@ int main(void) {
 	int sum = 0;
 
 	for (int i = 0; i < 5; i++) {
-		sum += *ptr;
-		ptr--;
+		sum += *ptr;    // sum에 ptr이 가리키고 있는 곳의 값을 더해줌
+		ptr--;          // ptr이 가리키는 주소 변경
 	}
 	printf("%d", sum);
 
