@@ -17,7 +17,7 @@ int main(void) {
 	
 
 	
-	
+	// 문제 2
 	printf("Question 13-1.2\n");
 	
 	int arr[5] = { 1,2,3,4,5 };
