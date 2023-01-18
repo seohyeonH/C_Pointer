@@ -24,7 +24,7 @@ int main(void) {
 	for (int i = 0; arr[i] != '\0'; i++) len++;   // 길이 계산
 	
 	for (int i = 0; i < len / 2; i++) {  // 길이가 9라면 배열의 네번째 요소까지만 계산함.
-		temp = arr[len - i - 1];     // len - i -1은 배열이 0번째부터 시작하기 때문임
+		temp = arr[len - i - 1];     // temp에는 배열의 8, 7, 6, 5번째 요소가 들어감.
  		arr[len - i - 1] = arr[i];
 		arr[i] = temp;
 	}
