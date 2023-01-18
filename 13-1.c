@@ -51,10 +51,10 @@ int main(void) {
 	int* back = &arr[5];
 	int mid = 0;
 
-	for (int i = 0; i < 3; i++) {
-		mid = *(front + i);
-		*(front + i) = *(back - i);
-		*(back - i) = mid;
+	for (int i = 0; i < 3; i++) {        // i = 0인 경우,
+		mid = *(front + i);          // mid = *front = &arr[0]
+		*(front + i) = *(back - i);  // *front = *back = &arr[5]
+		*(back - i) = mid;           // *back = &arr[0]
 	}
 
 	for (int i = 0; i < 6; i++) printf("%d ", arr[i]);
