@@ -7,7 +7,7 @@ int main(void) {
 	char sen[50];
 	int len;
 	bool check = true;
-	printf("¹®ÀÚ¿­ ÀÔ·Â: ");
+	printf("ë¬¸ìì—´ ì…ë ¥: ");
 	scanf("%s", sen);
 
 	len = (int)strlen(sen);
@@ -18,7 +18,7 @@ int main(void) {
 		}
 	}
 
-	if (check) printf("È¸¹®ÀÔ´Ï´Ù.");
-	else printf("È¸¹®ÀÌ ¾Æ´Õ´Ï´Ù.");
+	if (check) printf("íšŒë¬¸ì…ë‹ˆë‹¤.");
+	else printf("íšŒë¬¸ì´ ì•„ë‹™ë‹ˆë‹¤.");
 	return 0;
 }
