@@ -4,12 +4,13 @@
 void ShowData(const int* ptr);
 
 int main(void) {
-	// ë¬¸ì œ 1
+	// ¹®Á¦ 1
 	printf("Question 14-2.1\n");
 	int num = 10;
 	int* ptr = &num;
 	
 	ShowData(ptr);
+	return 0;
 }
 
 void ShowData(const int* ptr) {
