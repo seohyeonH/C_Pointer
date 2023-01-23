@@ -8,14 +8,14 @@ int main(void) {
 	int odd = 0, even = LEN -1;
 
 	for (int i = 0; i < LEN; i++) {
-		printf("ÀÔ·Â: ");
+		printf("Ã€Ã”Â·Ã‚: ");
 		scanf("%d", &num);
 		
 		if (num % 2 == 0) arr[even--] = num;
 		else arr[odd++] = num;
 	}
 
-	printf("¹è¿­ ¿ä¼ÒÀÇ Ãâ·Â: ");
+	printf("Â¹Ã¨Â¿Â­ Â¿Ã¤Â¼Ã’Ã€Ã‡ ÃƒÃ¢Â·Ã‚: ");
 	for (int i = 0; i < LEN; i++) printf("%d ", arr[i]);
 	return 0;
 }
