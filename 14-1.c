@@ -1,12 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int SquareByValue(int num);					  // ¹®Á¦ 1
-void SquareByReference(int* num);			  // ¹®Á¦ 1
-void Swap3(int* ptr1, int* ptr2, int* ptr3);  // ¹®Á¦ 2
+int SquareByValue(int num);			// ë¬¸ì œ 1
+void SquareByReference(int* num);		// ë¬¸ì œ 1
+void Swap3(int* ptr1, int* ptr2, int* ptr3);    // ë¬¸ì œ 2
 
 int main(void) {
-	// ¹®Á¦ 1
+	// ë¬¸ì œ 1
 	printf("Question 14-1.1\n");
 
 	int num1 = 10;
@@ -19,7 +19,7 @@ int main(void) {
 	
 
 
-	// ¹®Á¦ 2
+	// ë¬¸ì œ 2
 	printf("Question 14-1.2\n");
 
 	int num1 = 10;
@@ -43,7 +43,7 @@ void SquareByReference(int* num) {
 void Swap3(int* ptr1, int* ptr2, int* ptr3){
 	int temp = *ptr1;
 
-	*ptr1 = *ptr2;   // ptr2°¡ °¡¸®Å°´Â °ªÀ» ptr1ÀÌ °¡¸®Å°´Â °ª¿¡ ÀúÀå.
-	*ptr2 = *ptr3;   // ptr3ÀÌ °¡¸®Å°´Â °ªÀ» ptr2°¡ °¡¸®Å°´Â °ª¿¡ ÀúÀå.
+	*ptr1 = *ptr2;   // ptr2ê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ì„ ptr1ì´ ê°€ë¦¬í‚¤ëŠ” ê°’ì— ì €ì¥.
+	*ptr2 = *ptr3;   // ptr3ì´ ê°€ë¦¬í‚¤ëŠ” ê°’ì„ ptr2ê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ì— ì €ì¥.
 	*ptr3 = temp;
 }
