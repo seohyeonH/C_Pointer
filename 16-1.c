@@ -4,23 +4,25 @@
 #define HEIGHT 9
 
 int main(void) {
-	// ¹®Á¦ 1
+	// ë¬¸ì œ 1
 	printf("Question 16-1.1\n");
 	int arr[WIDTH][HEIGHT];
-	int std = 2;
+	int std = 2;    // ë¬¸ì œì—ì„œ ì œì‹œí•œ êµ¬êµ¬ë‹¨ì€ 2ë‹¨ë¶€í„°ì´ë¯€ë¡œ ê¸°ì¤€ì„ 2ë¡œ ì¡ì•„ë‘ì—ˆìŒ.
 
 	for (int i = 0; i < WIDTH; i++) {
 		for (int j = 0; j < HEIGHT; j++) arr[i][j] = (i + std) * (j + 1);
 	}
 
 	for (int i = 0; i < WIDTH; i++) {
+		printf("%dë‹¨\n", std++);
 		for (int j = 0; j < HEIGHT; j++) printf("%d ", arr[i][j]);
 		printf("\n");
 	}
 
-	// ¹®Á¦ 2
+	
+	// ë¬¸ì œ 2
 	printf("\nQuestion 16-1.2\n");
-	int arr1[][4] = { 1,2,3,4,5,6,7,8 };
+	int arr1[][4] = { 1, 2, 3, 4, 5, 6, 7, 8 };
 	int arr2[4][2];
 
 	for (int i = 0; i < 4; i++) {
@@ -32,19 +34,21 @@ int main(void) {
 		printf("\n");
 	}
 
-	// ¹®Á¦ 3
+	
+	// ë¬¸ì œ 3
 	printf("\nQuestion 16-1.3\n");
-	int grade[5][5] = { 0 }; // {{5, 4, 6, 5}, {3, 6, 9, 3}, {4, 8, 2, 7}, {3, 8, 9, 7}}
+	int grade[5][5] = { 0 };
+	// {{5, 4, 6, 5}, {3, 6, 9, 3}, {4, 8, 2, 7}, {3, 8, 9, 7}}
 
-	printf("±¹¾î, ¿µ¾î, ¼öÇĞ, ±¹»ç ¼øÀ¸·Î ÀÔ·Â\n");
+	printf("êµ­ì–´, ì˜ì–´, ìˆ˜í•™, êµ­ì‚¬ ìˆœìœ¼ë¡œ ì…ë ¥\n");
 	for (int i = 0; i < 4; i++) {
-		printf("%d¹øÂ° ÇĞ»ıÀÇ ¼ºÀû: ", i + 1);
-		
-		for (int j = 0; j < 4; j++) {
+		printf("%dë²ˆì§¸ í•™ìƒì˜ ì„±ì : ", i + 1);
+
+		for (int j = 0; j < 4; j++) {        // ì…ë ¥í•˜ê³  ë°”ë¡œ ì €ì¥í•˜ëŠ” ë°©ë²•
 			scanf("%d", &grade[i][j]);
-			grade[i][4] += grade[i][j];  // °³ÀÎº° ÃÑÁ¡
-			grade[4][j] += grade[i][j];  // °ú¸ñº° ÃÑÁ¡
-			grade[4][4] += grade[i][j];  // ÃÑÁ¡
+			grade[i][4] += grade[i][j];  // ê°œì¸ë³„ ì´ì 
+			grade[4][j] += grade[i][j];  // ê³¼ëª©ë³„ ì´ì 
+			grade[4][4] += grade[i][j];  // ì´ì 
 		}
 	}
 
@@ -54,16 +58,16 @@ int main(void) {
 
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < 4; j++) {
-			grade[i][4] += grade[i][j];  // °³ÀÎº° ÃÑÁ¡
-			grade[4][j] += grade[i][j];  // °ú¸ñº° ÃÑÁ¡
-			grade[4][4] += grade[i][j];  // ÃÑÁ¡
+			grade[i][4] += grade[i][j];  // ê°œì¸ë³„ ì´ì 
+			grade[4][i] += grade[j][i];  // ê³¼ëª©ë³„ ì´ì 
 		}
+		grade[4][4] += grade[4][i];  // ì´ì 
 	}*/
 
 	for (int i = 0; i < 5; i++) {
 		if (i < 4) printf("#%7d: ", i + 1);
-		else printf("°ú¸ñº° ÃÑÁ¡: ");
-		for (int j = 0; j < 5; j++) printf("%d ", grade[i][j]);
+		else printf("ê³¼ëª©ë³„ ì´ì : ");
+		for (int j = 0; j < 5; j++) printf("%2d ", grade[i][j]);
 		printf("\n");
 	}
 }
