@@ -22,7 +22,7 @@ void DectoBin(int num) {
 		else num /= 2;
 	}
 
-	if(num / 2 == 0)
+	if(num / 2 == 0)  // 무한반복문을 탈출하는 조건문을 그대로 갖고왔음. (= 무한반복문에서 탈출하였다면 무조건 실행하도록 정해두었음) 
 		for (int i = len - 1; i >= 0; i--) printf("%d", arr[i]);
 	// arr[len]에 값을 넣은 후 len은 1씩 더해지기 때문에, i는 len-1로 정해주었음.
 	// num = 12이라면, arr에는 0011으로 저장되기에 뒤에서부터 출력해줌.
