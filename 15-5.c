@@ -19,7 +19,7 @@ int main(void) {
 
 void DesSort(int* arr) {
 	int min;
-	for (int i = 0; i < LEN; i++) {
+	for (int i = 0; i < LEN - 1; i++) {  
 		for (int j = 0; j < LEN - i - 1; j++) {
 			if (arr[j] < arr[j + 1]) {
 				min = arr[j];
