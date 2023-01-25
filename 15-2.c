@@ -17,10 +17,13 @@ void DectoBin(int num) {
 	int len = 0;
 
 	while(1){
-		arr[len++] = num % 2;
-		if (num / 2 == 0) break;
+		arr[len++] = num % 2;       // num을 2로 나눈 나머지를 arr[len]에 저장한 후, len에 1 더하기
+		if (num / 2 == 0) break;    // 만약 num을 2로 나누었을 때 몫이 0이라면 반복문 탈출 (num이 0 또는 1이라는 의미)
 		else num /= 2;
 	}
 
-	if(num / 2 == 0) for (int i = len - 1; i >= 0; i--) printf("%d", arr[i]);
+	if(num / 2 == 0)
+		for (int i = len - 1; i >= 0; i--) printf("%d", arr[i]);
+	// arr[len]에 값을 넣은 후 len은 1씩 더해지기 때문에, i는 len-1로 정해주었음.
+	// num = 12이라면, arr에는 0011으로 저장되기에 뒤에서부터 출력해줌.
 }
