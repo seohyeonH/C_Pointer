@@ -5,7 +5,7 @@ void DectoBin(int num);
 
 int main(void) {
 	int num;
-	printf("10Áø¼ö Á¤¼ö ÀÔ·Â: ");
+	printf("10진수 정수 입력: ");
 	scanf("%d", &num);
 
 	DectoBin(num);
