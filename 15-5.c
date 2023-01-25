@@ -3,13 +3,13 @@
 #include <string.h>
 #define LEN 7
 
-int* DesSort(int* arr);
+void DesSort(int* arr);
 
 int main(void) {
 	int arr[LEN];
 	
 	for (int i = 0; i < LEN; i++) {
-		printf("ÀÔ·Â: ");
+		printf("입력: ");
 		scanf("%d", &arr[i]);
 	}
 
@@ -17,7 +17,7 @@ int main(void) {
 	for (int i = 0; i < LEN; i++) printf("%d ", arr[i]);
 }
 
-int* DesSort(int* arr) {
+void DesSort(int* arr) {
 	int min;
 	for (int i = 0; i < LEN; i++) {
 		for (int j = 0; j < LEN - i - 1; j++) {
@@ -28,6 +28,4 @@ int* DesSort(int* arr) {
 			}
 		}
 	}
-
-	return arr;
 }
