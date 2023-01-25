@@ -65,7 +65,7 @@ int main(void) {
 	}*/
 
 	for (int i = 0; i < 5; i++) {
-		if (i < 4) printf("#%7d: ", i + 1);
+		if (i < 4) printf("%12d: ", i + 1);
 		else printf("과목별 총점: ");
 		for (int j = 0; j < 5; j++) printf("%2d ", grade[i][j]);
 		printf("\n");
