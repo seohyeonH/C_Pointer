@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#define SIZE 5
 
 int main(void) {
 	int num1 = 1, num2 = 2, num3 = 3, num4 = 4, num5 = 5;
