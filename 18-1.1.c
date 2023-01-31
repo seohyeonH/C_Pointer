@@ -3,14 +3,14 @@
 #define SIZE 5
 
 int main(void) {
-	int num1 = 1, num2 = 2, num3 = 3, num4 = 4, num5 = 5, num6 = 6, num7 = 7;
+	int num1 = 1, num2 = 2, num3 = 3, num4 = 4, num5 = 5;
 	int* arr1[5] = { &num1, &num2, &num3, &num4, &num5 };
-	int* arr2[3][5] = { &num1, &num2, &num3, &num4, &num5 , &num6, &num7};
+	int* arr2[3][5];
 
 	int** ptr1 = arr1;  // *(ptr + 0) == &num1 -> **(ptr + 0) = num1
 	int*(*ptr2)[5] = arr2;
-	// °¡·Î ±æÀÌ°¡ 5ÀÎ intÇü 2Â÷¿ø ¹è¿­À» °¡¸®Å°´Â Æ÷ÀÎÅÍ º¯¼ö¶ó¸é (*ptr)[5]ÀÌ°í,
-	// ÀÌ ¹®Á¦¿¡¼­´Â °¡·Î ±æÀÌ°¡ 5ÀÎ intÇü 2Â÷¿ø Æ÷ÀÎÅÍ¹è¿­À» °¡¸®Å°´Â Æ÷ÀÎÅÍº¯¼ö¸¦ ¼±¾ðÇØ¾ßÇÏ¹Ç·Î *(*ptr2)[5]¶ó°í ¼±¾ð.
+	// ê°€ë¡œ ê¸¸ì´ê°€ 5ì¸ intí˜• 2ì°¨ì› ë°°ì—´ì„ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„° ë³€ìˆ˜ë¼ë©´ (*ptr)[5]ì´ê³ ,
+	// ì´ ë¬¸ì œì—ì„œëŠ” ê°€ë¡œ ê¸¸ì´ê°€ 5ì¸ intí˜• 2ì°¨ì› í¬ì¸í„°ë°°ì—´ì„ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•´ì•¼í•˜ë¯€ë¡œ *(*ptr2)[5]ë¼ê³  ì„ ì–¸.
 	
 	for (int i = 0; i < 5; i++) printf("%d ", **(ptr1 + i)); 
 	// *(ptr + i) == ptr[i] == &arr1[i]
