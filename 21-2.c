@@ -4,21 +4,21 @@
 #include <stdlib.h>
 #define SIZE 10
 
-int checkBlank(char* sen1, char* sen2);
+int checkBlank(char* sen1, char* sen2);  // ë¬¸ì œ 3
 
 int main(void) {
-	// ¹®Á¦ 1
-	/*int sum = 0;
+	// ë¬¸ì œ 1
+	int sum = 0;
 	char str[SIZE];
 	gets_s(str, SIZE);
 
 	for (int i = 0; i < strlen(str); i++)
 		if (str[i] >= '1' && str[i] <= '9') sum += (str[i] + 1 - '1');
 
-	printf("¾Æ¶óºñ¾Æ ¼ýÀÚÀÇ ÇÕÀº %dÀÔ´Ï´Ù. \n", sum);
+	printf("ì•„ë¼ë¹„ì•„ ìˆ«ìžì˜ í•©ì€ %dìž…ë‹ˆë‹¤. \n", sum);
 
 
-	// ¹®Á¦ 2
+	// ë¬¸ì œ 2
 	int len;
 	char str1[20], str2[20], str3[40];
 	fgets(str1, sizeof(str1), stdin);
@@ -31,8 +31,8 @@ int main(void) {
 	strcat(str3, str2);
 	printf("%s", str3);
 
-	*/
-	// ¹®Á¦ 3
+	
+	// ë¬¸ì œ 3
 	char sen1[SIZE], sen2[SIZE];
 	int res = 0, age1 = 0, age2 = 0;
 	int check;
@@ -40,17 +40,17 @@ int main(void) {
 	gets_s(sen2, SIZE);
 
 	check = checkBlank(sen1, sen2);
-	if(check == -1) printf("ÀÌ¸§°ú ³ªÀÌ°¡ µ¿ÀÏÇÏÁö ¾Ê½À´Ï´Ù.\n");
+	if(check == -1) printf("ì´ë¦„ê³¼ ë‚˜ì´ê°€ ë™ì¼í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
 	else {
-		res = strncmp(sen1, sen2, check); // ÀÌ¸§ ºñ±³			
-		age1 = atoi(&sen1[check + 1]);    // user1 ³ªÀÌ
-		age2 = atoi(&sen2[check + 1]);    // user2 ³ªÀÌ
+		res = strncmp(sen1, sen2, check); // ì´ë¦„ ë¹„êµ			
+		age1 = atoi(&sen1[check + 1]);    // user1 ë‚˜ì´
+		age2 = atoi(&sen2[check + 1]);    // user2 ë‚˜ì´
 
-		if (res == 0) printf("ÀÌ¸§ÀÌ µ¿ÀÏÇÕ´Ï´Ù.\n");
-		else printf("ÀÌ¸§ÀÌ Æ²¸³´Ï´Ù.\n");
+		if (res == 0) printf("ì´ë¦„ì´ ë™ì¼í•©ë‹ˆë‹¤.\n");
+		else printf("ì´ë¦„ì´ í‹€ë¦½ë‹ˆë‹¤.\n");
 
-		if (age1 == age2) printf("³ªÀÌ°¡ °°½À´Ï´Ù.\n");
-		else printf("³ªÀÌ°¡ Æ²¸³´Ï´Ù.\n");
+		if (age1 == age2) printf("ë‚˜ì´ê°€ ê°™ìŠµë‹ˆë‹¤.\n");
+		else printf("ë‚˜ì´ê°€ í‹€ë¦½ë‹ˆë‹¤.\n");
 	}
 }
 
