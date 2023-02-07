@@ -11,7 +11,7 @@ int main(void) {
 
 	count = 1; 
 	srand((int)time(NULL));
-	for (i = 0; i < 3; i++) {   // °ªÀÌ Áßº¹µÉ °æ¿ì¸¦ ´ëºñÇÏ¿© ÇÑ ¹ø È®ÀÎÇÏ´Â ÄÚµå(16-17ÁÙ) Ãß°¡.
+	for (i = 0; i < 3; i++) {   // ê°’ì´ ì¤‘ë³µë  ê²½ìš°ë¥¼ ëŒ€ë¹„í•˜ì—¬ í•œ ë²ˆ í™•ì¸í•˜ëŠ” ì½”ë“œ(16-17ì¤„) ì¶”ê°€.
 		game[i] = (rand() % 10);
 		for (j = 0; j < i; j++)
 			if (game[i] == game[j]) i--;
@@ -22,7 +22,7 @@ int main(void) {
 		strike = 0, ball = 0;
 
 		Game(game, &strike, &ball);
-		printf("%d¹øÂ° µµÀü °á°ú: %dstrike, %dball!!\n", count++, strike, ball);
+		printf("%dë²ˆì§¸ ë„ì „ ê²°ê³¼: %dstrike, %dball!!\n", count++, strike, ball);
 
 		if (strike == 3 && ball == 0) break;
 	}
@@ -33,7 +33,7 @@ int main(void) {
 void Game(int* game, int *strike, int *ball) {
 	int user[3];
 
-	printf("3°³ÀÇ ¼ýÀÚ ¼±ÅÃ: ");
+	printf("3ê°œì˜ ìˆ«ìž ì„ íƒ: ");
 	for (int i = 0; i < 3; i++) scanf("%d", &user[i]);
 
 	for (int i = 0; i < 3; i++) {
