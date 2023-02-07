@@ -6,6 +6,6 @@
 int main(void) {
 	srand((int)time(NULL));
 
-	printf("ÁÖ»çÀ§ 1ÀÇ °á°ú %d \n", rand() % 6 + 1);
-	printf("ÁÖ»çÀ§ 2ÀÇ °á°ú %d \n", rand() % 6 + 1);
+	printf("ì£¼ì‚¬ìœ„ 1ì˜ ê²°ê³¼ %d \n", rand() % 6 + 1);
+	printf("ì£¼ì‚¬ìœ„ 2ì˜ ê²°ê³¼ %d \n", rand() % 6 + 1);
 }
