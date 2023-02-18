@@ -2,16 +2,19 @@
 #include <stdio.h>
 
 int main(void) {
+	// ë¬¸ì œ 1 & 2
 	FILE* fp = fopen("mystory.txt", "wt");
 	
-	fputs("#ÀÌ¸§: È«¼­Çö\n", fp);
-	fputs("#ÁÖ¹Î¹øÈ£: 010928-4200223\n", fp);
-	fputs("#ÀüÈ­¹øÈ£: 01099753084\n", fp);
-	fputs("#Áñ°Ü¸Ô´Â À½½Ä: Â«»Í, ÅÁ¼öÀ°\n", fp);
-	fputs("#Ãë¹Ì: Ãà±¸\n", fp);
+	fputs("#ì´ë¦„: í™ì„œí˜„\n", fp);
+	fputs("#ì£¼ë¯¼ë²ˆí˜¸: 010928-4200223\n", fp);
+	fputs("#ì „í™”ë²ˆí˜¸: 01099753084\n", fp);
+	fputs("#ì¦ê²¨ë¨¹ëŠ” ìŒì‹: ì§¬ë½•, íƒ•ìˆ˜ìœ¡\n", fp);
+	fputs("#ì·¨ë¯¸: ì¶•êµ¬\n", fp);
 
 	fclose(fp);
 
+	
+	// ë¬¸ì œ 3
 	FILE* file = fopen("mystory.txt", "rt");
 	char str[30];
 	while (fgets(str, sizeof(str), file) != NULL)
