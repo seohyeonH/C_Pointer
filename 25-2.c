@@ -4,15 +4,16 @@
 #include <string.h>
 
 int main(void) {
-	/*char* str = NULL;
+	// ë¬¸ì œ 1
+	char* str = NULL;
 	int max, len;
-	printf("¹®ÀÚ¿­ÀÇ ÃÖ´ë±æÀÌ´Â? ");
+	printf("ë¬¸ìì—´ì˜ ìµœëŒ€ê¸¸ì´ëŠ”? ");
 	scanf("%d", &max);
 
 	str = (char*)malloc(max * sizeof(char));
 	if (str == NULL) exit(1);
 	getchar();
-	printf("¹®ÀÚ¿­: ");
+	printf("ë¬¸ìì—´: ");
 	gets(str, max+1);
 
 	len = strlen(str);
@@ -20,8 +21,9 @@ int main(void) {
 		printf("%c", str[len - 1 - i]);
 
 	free(str);
-	*/
-
+	
+	
+	// ë¬¸ì œ 2
 	int num = 0, count = 0;
 	int start = 5;
 	int* heap;
@@ -33,9 +35,7 @@ int main(void) {
 		if (num == -1) break;
 
 		heap[count++] = num;
-	
-		printf("%d", count);
-
+		
 		if (start = count + 1) {
 			start += 3;
 			heap = (int*)realloc(heap, sizeof(int) * start);
@@ -45,6 +45,3 @@ int main(void) {
 	for (int i = 0; i < count; i++) printf("%d ", heap[i]);
 	free(heap);
 }
-
-// ½ºÅÃ ¸Ş¸ğ¸® »ı¼º: num1 = 20 -> n = 20 -> num2 = 21 -> n = 21 -> num3 = 22
-// ½ºÅÃ ¸Ş¸ğ¸® ¼Ò¸ê: num3 = 22 & n = 21 -> num2 = 21 & n = 20 -> num1 = 20 (return 0)
