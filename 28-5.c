@@ -23,8 +23,8 @@ int main(void) {
 	}
 
 	printf("C: d1.txt d2.txt\n");
-	if (res) printf("µÎ °³ÀÇ ÆÄÀÏÀº ¿ÏÀüÈ÷ ÀÏÄ¡ÇÕ´Ï´Ù.");
-	else printf("µÎ °³ÀÇ ÆÄÀÏÀº ºÒÀÏÄ¡ÇÕ´Ï´Ù.");
+	if (res) printf("ë‘ ê°œì˜ íŒŒì¼ì€ ì™„ì „íˆ ì¼ì¹˜í•©ë‹ˆë‹¤.");
+	else printf("ë‘ ê°œì˜ íŒŒì¼ì€ ë¶ˆì¼ì¹˜í•©ë‹ˆë‹¤.");
 
 	fclose(fp1);
 	fclose(fp2);
