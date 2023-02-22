@@ -31,16 +31,16 @@ int main(void) {
 	CNum num1, num2;
 	CNum* plus, * multiple;
 
-	printf("º¹¼Ò¼ö ÀÔ·Â1[½Ç¼ö Çã¼ö]: ");
+	printf("ë³µì†Œìˆ˜ ìž…ë ¥1[ì‹¤ìˆ˜ í—ˆìˆ˜]: ");
 	scanf("%lf %lf", &num1.real, &num1.imaginary);
-	printf("º¹¼Ò¼ö ÀÔ·Â1[½Ç¼ö Çã¼ö]: ");
+	printf("ë³µì†Œìˆ˜ ìž…ë ¥1[ì‹¤ìˆ˜ í—ˆìˆ˜]: ");
 	scanf("%lf %lf", &num2.real, &num2.imaginary);
 
 	plus = Plus(num1, num2);
 	multiple = Multiple(num1, num2);
 
-	printf("ÇÕÀÇ °á°ú] ½Ç¼ö: %06f, Çã¼ö: %06f\n", plus->real, plus->imaginary);
-	printf("°öÀÇ °á°ú] ½Ç¼ö: %06f, Çã¼ö: %06f\n", multiple->real, multiple->imaginary);
+	printf("í•©ì˜ ê²°ê³¼] ì‹¤ìˆ˜: %06f, í—ˆìˆ˜: %06f\n", plus->real, plus->imaginary);
+	printf("ê³±ì˜ ê²°ê³¼] ì‹¤ìˆ˜: %06f, í—ˆìˆ˜: %06f\n", multiple->real, multiple->imaginary);
 
 	free(plus);
 	free(multiple);
