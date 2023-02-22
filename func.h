@@ -14,7 +14,10 @@ typedef struct programnode {
 
 int Display(void);
 Program* Insert(Program* data);
+Program* tempDel(Program* root);
+Program* Delete(Program* data, char* name);
 void PrintAll(Program* data);
+void Search(Program* data, char* name);
 
 int Display(void) {
 	int choose;
@@ -67,6 +70,7 @@ Program* Delete(Program* data, char* name) {
 			return temp;
 		}
 	}
+	
 	return data;
 }
 
@@ -79,7 +83,7 @@ void Search(Program* data, char* name) {
 		}
 		else data = data->next;
 	}
-	printf("ÇØ´ç Á¤º¸°¡ ¾ø½À´Ï´Ù\n.");
+	printf("í•´ë‹¹ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 }
 
 void PrintAll(Program* data) {
