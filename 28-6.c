@@ -69,13 +69,19 @@ int main(void) {
 			break;
 
 		case 5:
-			printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
+			printf("í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n");
 			exit(1);
 
 		default:
-			printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\n");
+			printf("ìž˜ëª» ìž…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.\n");
 			break;
 		}
 
 	}
+	
+	free(data->next);
+	free(data->pre);
+	free(data);
+	free(node->first);
+	free(node);
 }
