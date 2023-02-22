@@ -51,9 +51,6 @@ Program* Delete(Program* data, char* name) {
 		if (!strcmp(data->name, name)) {
 			if (data->pre != NULL) {
 				temp = data->pre;
-				// 1: NULL	 A 010	 2			temp
-				// 2: 1(pre) B 020	 3(next)    data(삭제할게)
-				// 3: 2(pre) _ ___   NULL(next) data->next
 				
 				temp->pre = data->pre->pre;
 				temp->next = data->next;
