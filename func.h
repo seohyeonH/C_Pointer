@@ -35,7 +35,7 @@ int Display(void) {
 
 Program* Insert(Program* data) {
 	data->next = (Program*)malloc(sizeof(Program));
-	
+
 	data->next->pre = data;
 	data->next->next = NULL;
 	printf("\t\tData Inserted\n\n");
@@ -43,34 +43,33 @@ Program* Insert(Program* data) {
 	return data->next;
 }
 
-Program* tempDel(Program* root) {
-	Program* tmp = root;
-	while (tmp->pre != NULL)
-		tmp = tmp->pre;
-
-	return tmp;
-}
-
 Program* Delete(Program* data, char* name) {
 	Program* temp = NULL;
 
 	if (data == NULL) return data;
-	if (!strcmp(data->name, name)) {
-		if (data->pre != NULL && data->next != NULL) {
-			temp = tempDel(data->next);
+	while (data->next != NULL) {
+		if (!strcmp(data->name, name)) {
+			if (data->pre != NULL) {
+				temp = data->pre;
+				// 1: NULL	 A 010	 2			temp
+				// 2: 1(pre) B 020	 3(next)    data(삭제할게)
+				// 3: 2(pre) _ ___   NULL(next) data->next
+				
+				temp->pre = data->pre->pre;
+				temp->next = data->next;
+				temp->next->pre = temp->next;
+				
+				return temp;
+			}
+			else {
+				temp = data->next;
+				temp->pre = NULL;
 
-			strcpy(data->name, temp->name);
-			strcpy(data->number, temp->number);
-			data->next = Delete(data->next, temp->name);
+				return temp;
+			}
 		}
-		else {
-			temp = (data->pre == NULL) ? data->next : data->pre;
-			free(data);
-
-			return temp;
-		}
+		else data = data->next;
 	}
-	
 	return data;
 }
 
@@ -83,7 +82,7 @@ void Search(Program* data, char* name) {
 		}
 		else data = data->next;
 	}
-	printf("해당 정보가 없습니다.");
+	printf("해당 정보가 없습니다.\n");
 }
 
 void PrintAll(Program* data) {
@@ -92,4 +91,5 @@ void PrintAll(Program* data) {
 		printf("Name: %s\t Tel: %s\n", data->name, data->number);
 		data = data->next;
 	}
+	printf("\n");
 }
