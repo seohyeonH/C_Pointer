@@ -17,8 +17,8 @@ int main(void) {
 	}
 
 	printf("C: text.txt\n");
-	printf("A·Î ½ÃÀÛÇÏ´Â ´Ü¾îÀÇ ¼ö: %d\n", Acount);
-	printf("P·Î ½ÃÀÛÇÏ´Â ´Ü¾îÀÇ ¼ö: %d\n", Pcount);
+	printf("Aë¡œ ì‹œì‘í•˜ëŠ” ë‹¨ì–´ì˜ ìˆ˜: %d\n", Acount);
+	printf("Pë¡œ ì‹œì‘í•˜ëŠ” ë‹¨ì–´ì˜ ìˆ˜: %d\n", Pcount);
 
 	fclose(fp);
 }
