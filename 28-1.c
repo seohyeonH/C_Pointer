@@ -9,26 +9,26 @@ typedef struct book {
 } Book;
 
 void printInfo(Book list[3]) {
-	printf("µµ¼­ Á¤º¸ Ãâ·Â\n");
+	printf("ë„ì„œ ì •ë³´ ì¶œë ¥\n");
 	for (int i = 0; i < 3; i++) {
-		printf("ÀúÀÚ: %s\n", list[i].author);
-		printf("Á¦¸ñ: %s\n", list[i].title);
-		printf("ÆäÀÌÁö ¼ö: %d\n", list[i].page);
+		printf("ì €ì: %s\n", list[i].author);
+		printf("ì œëª©: %s\n", list[i].title);
+		printf("í˜ì´ì§€ ìˆ˜: %d\n", list[i].page);
 	}
 }
 
 int main(void) {
 	Book list[3];
 
-	printf("µµ¼­ Á¤º¸ ÀÔ·Â\n");
+	printf("ë„ì„œ ì •ë³´ ì…ë ¥\n");
 	for (int i = 0; i < 3; i++) {
-		printf("ÀúÀÚ: ");
+		printf("ì €ì: ");
 		gets_s(list[i].author, 10);
 
-		printf("Á¦¸ñ: ");
+		printf("ì œëª©: ");
 		gets_s(list[i].title, 30);
 
-		printf("ÆäÀÌÁö ¼ö: ");
+		printf("í˜ì´ì§€ ìˆ˜: ");
 		scanf("%d", &list[i].page);
 		
 		getchar();
